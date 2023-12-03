@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.reactive-non-metals: {
+  background-color: #3f6212;
+}
+
+.alkali-metals: {
+  background-color: #FFD600;
+}
+
+.alkaline-earth-metals: {
+  background-color: #FF9100;
+}
+
+.transition-metals: {
+  background-color: #991b1b;
+}
+
+.post-transition-metals: {
+  background-color: #1d4ed8;
+}
+
+.metalloids: {
+  background-color: #10b981;
+}
+
+.noble-gases: {
+  background-color: #8b5cf6;
+}
+
+.lanthanides: {
+  background-color: #a16207;
+}
+
+.actinides: {
+  background-color: #db2777;
+}
+

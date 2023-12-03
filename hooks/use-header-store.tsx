@@ -1,14 +1,14 @@
 import { create } from 'zustand';
 
 interface HeaderStore {
-  firstName: string | null;
-  lastName: string | null;
+  firstName: string;
+  lastName: string;
   setHeader: (firstName: string, lastName: string) => void;
 }
 
 const useHeaderStore = create<HeaderStore>((set) => ({
-  firstName: null,
-  lastName: null,
+  firstName: 'Breaking',
+  lastName: 'Bad',
   setHeader: (firstName, lastName) => {
     set({ firstName, lastName });
   },
