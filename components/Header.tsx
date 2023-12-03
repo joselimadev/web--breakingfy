@@ -1,4 +1,10 @@
+'use client';
+
+import useHeaderStore from '@/hooks/use-header-store';
+
 export default function Header() {
+  const headerStore = useHeaderStore();
+
   return (
     <header className="text-9xl text-white flex flex-col items-center">
       <span className="flex items-center">
@@ -13,6 +19,7 @@ export default function Header() {
         </strong>
         d
       </span>
+      {headerStore.firstName} {headerStore.lastName}
     </header>
   );
 }

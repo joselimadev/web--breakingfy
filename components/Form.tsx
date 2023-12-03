@@ -2,9 +2,10 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import Button from './ui/button';
 import Input from './ui/input';
-import { z } from 'zod';
+import useHeaderStore from '@/hooks/use-header-store';
 
 const schema = z.object({
   firstName: z
@@ -20,6 +21,8 @@ const schema = z.object({
 type FormProps = z.infer<typeof schema>;
 
 export default function Form() {
+  const headerStore = useHeaderStore();
+
   const {
     handleSubmit,
     register,
@@ -34,8 +37,9 @@ export default function Form() {
     },
   });
 
-  const handleFormSubmit = async (formData: FormProps) => {
+  const handleFormSubmit = (formData: FormProps) => {
     if (isValid) {
+      headerStore.setHeader(formData.firstName, formData.lastName);
     }
   };
 

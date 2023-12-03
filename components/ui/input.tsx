@@ -37,7 +37,7 @@ const Input: React.FC<InputProps> = ({
           w-full 
           p-4
           pt-6 
-          font-light 
+          font-semibold 
           bg-white 
           border-2 
           rounded-md 
@@ -45,12 +45,12 @@ const Input: React.FC<InputProps> = ({
           trasition 
           disabled:opacity-70 
           default:cursor-not-allowed
-          ${formatPrice ? `pl-9` : `pl-4`}
+          pl-4
           ${errors && errors[id] ? `border-rose-500` : `border-neutral-300`}
           ${
             errors && errors[id]
               ? `focus:border-rose-500`
-              : `focus:border-green-800`
+              : `focus:border-green-500`
           }
         `}
       />
